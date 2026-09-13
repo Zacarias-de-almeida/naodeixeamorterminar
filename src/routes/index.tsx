@@ -148,7 +148,6 @@ function Index() {
               alt="Casal sentado em silêncio depois de uma conversa difícil"
               width={1536}
               height={1024}
-              loading="lazy"
               className="aspect-[4/3] w-full object-cover sm:aspect-[16/7]"
             />
             <figcaption className="absolute bottom-0 left-0 max-w-md bg-paper px-5 py-4 font-display text-xl sm:px-7 sm:py-5 sm:text-2xl">
@@ -206,7 +205,6 @@ function Index() {
             alt="Casal a conversar com calma e atenção"
             width={1536}
             height={1024}
-            loading="lazy"
             className="aspect-[4/3] h-full w-full object-cover sm:aspect-[16/10]"
           />
           <div className="flex flex-col justify-center bg-ink p-7 text-paper sm:p-12">
@@ -275,7 +273,6 @@ function Index() {
           alt="Casal a caminhar junto ao pôr do sol"
           width={1536}
           height={1024}
-          loading="lazy"
           className="absolute inset-0 -z-20 h-full w-full object-cover"
         />
         <div className="absolute inset-0 -z-10 bg-final-overlay" aria-hidden="true" />
