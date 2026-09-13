@@ -38,6 +38,7 @@
   --color-paper-border: var(--paper-border);
   --color-ink: var(--ink);
   --color-ink-muted: var(--ink-muted);
+  --color-final-overlay: var(--final-overlay);
 }
 
 :root {
@@ -68,6 +69,7 @@
   --paper-border: oklch(0.78 0.025 72);
   --ink: oklch(0.17 0.018 25);
   --ink-muted: oklch(0.43 0.018 35);
+  --final-overlay: oklch(0.08 0.02 22 / 76%);
 }
 
 @layer base {
