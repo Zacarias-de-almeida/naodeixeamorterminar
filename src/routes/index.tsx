@@ -12,6 +12,9 @@ import {
   TriangleAlert,
 } from "lucide-react";
 import ebookCover from "../assets/ebook-cover.jpg";
+import coupleConversation from "../assets/couple-conversation.jpg";
+import coupleDistance from "../assets/couple-distance.jpg";
+import coupleWalking from "../assets/couple-walking.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -139,6 +142,18 @@ function Index() {
               <blockquote className="border-y border-accent/40 py-6 font-display text-2xl italic text-primary sm:text-3xl">“Não precisas de desistir. Mas precisas de parar de agir pelo medo.”</blockquote>
             </div>
           </div>
+          <figure className="relative mt-14 sm:mt-20">
+            <img
+              src={coupleDistance}
+              alt="Casal sentado em silêncio depois de uma conversa difícil"
+              width={1536}
+              height={1024}
+              className="aspect-[4/3] w-full object-cover sm:aspect-[16/7]"
+            />
+            <figcaption className="absolute bottom-0 left-0 max-w-md bg-paper px-5 py-4 font-display text-xl sm:px-7 sm:py-5 sm:text-2xl">
+              A distância cresce quando o medo fala por nós.
+            </figcaption>
+          </figure>
         </div>
       </section>
 
@@ -182,6 +197,20 @@ function Index() {
               ))}
             </ul>
             <p className="mt-7 text-sm italic text-ink-muted">Uma reconexão depende de duas pessoas. Este guia não garante que alguém voltará — ajuda-te a fazer a tua parte de forma mais consciente.</p>
+          </div>
+        </div>
+        <div className="mx-auto grid max-w-6xl px-5 pb-20 sm:px-8 sm:pb-28 lg:grid-cols-[1.2fr_0.8fr]">
+          <img
+            src={coupleConversation}
+            alt="Casal a conversar com calma e atenção"
+            width={1536}
+            height={1024}
+            className="aspect-[4/3] h-full w-full object-cover sm:aspect-[16/10]"
+          />
+          <div className="flex flex-col justify-center bg-ink p-7 text-paper sm:p-12">
+            <p className="section-label text-accent">A conversa certa muda o tom</p>
+            <h3 className="mt-4 font-display text-3xl leading-tight sm:text-4xl">Falar para compreender. Não para vencer.</h3>
+            <p className="mt-5 leading-7 text-muted-foreground">Aprende a preparar uma aproximação mais serena, ouvir com atenção e expressar o que sentes sem transformar a conversa numa cobrança.</p>
           </div>
         </div>
       </section>
@@ -238,11 +267,19 @@ function Index() {
         </div>
       </section>
 
-      <section className="relative bg-primary text-primary-foreground">
-        <div className="mx-auto max-w-5xl px-5 py-20 text-center sm:px-8 sm:py-28">
+      <section className="relative isolate min-h-[640px] overflow-hidden bg-primary text-primary-foreground sm:min-h-[680px]">
+        <img
+          src={coupleWalking}
+          alt="Casal a caminhar junto ao pôr do sol"
+          width={1536}
+          height={1024}
+          className="absolute inset-0 -z-20 h-full w-full object-cover"
+        />
+        <div className="absolute inset-0 -z-10 bg-final-overlay" aria-hidden="true" />
+        <div className="mx-auto flex min-h-[640px] max-w-5xl flex-col items-center justify-center px-5 py-20 text-center sm:min-h-[680px] sm:px-8 sm:py-28">
           <HeartCrack className="mx-auto h-10 w-10 text-accent" aria-hidden="true" />
           <h2 className="mx-auto mt-7 max-w-4xl font-display text-4xl uppercase leading-tight sm:text-6xl">Ainda acreditas que esta história merece uma última oportunidade?</h2>
-          <p className="mx-auto mt-6 max-w-2xl leading-7 text-primary-foreground/80">Não deixes que o medo decida por ti. Recupera primeiro a tua clareza — e descobre o próximo passo possível.</p>
+          <p className="mx-auto mt-6 max-w-2xl leading-7 text-primary-foreground">Não deixes que o medo decida por ti. Recupera primeiro a tua clareza — e descobre o próximo passo possível.</p>
           <div className="mt-9"><Cta inverse>Sim, quero começar agora</Cta></div>
         </div>
       </section>
