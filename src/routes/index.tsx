@@ -215,19 +215,38 @@ function Index() {
         </div>
       </section>
 
-      <section id="oferta" className="relative border-y border-accent/30 bg-offer py-20 sm:py-28">
-        <div className="mx-auto max-w-5xl px-5 sm:px-8">
+      <section id="oferta" className="relative overflow-hidden border-y border-accent/30 bg-offer py-20 sm:py-28">
+        <div className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-primary/10 blur-3xl" aria-hidden="true" />
+        <div className="pointer-events-none absolute -bottom-32 -left-32 h-80 w-80 rounded-full bg-accent/5 blur-3xl" aria-hidden="true" />
+        <div className="relative mx-auto max-w-5xl px-5 sm:px-8">
           <div className="text-center">
-            <p className="section-label">Acesso completo</p>
-            <h2 className="mt-5 font-display text-4xl uppercase sm:text-6xl">Tudo o que precisas para começar com clareza</h2>
+            <span className="inline-flex items-center gap-2 rounded-sm bg-primary px-4 py-2 text-xs font-extrabold uppercase text-primary-foreground shadow-lg">
+              <Sparkles className="h-4 w-4" aria-hidden="true" />
+              Oferta especial de lançamento
+            </span>
+            <h2 className="mx-auto mt-6 max-w-3xl font-display text-4xl uppercase leading-[1.05] sm:text-5xl lg:text-6xl">
+              Ainda acreditas no amor de vocês? <span className="text-accent">Então não pares agora.</span>
+            </h2>
+            <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-muted-foreground sm:text-lg">
+              Recebe o guia completo + 5 bónus práticos e descobre como agir com clareza, dignidade e uma verdadeira chance de reconexão.
+            </p>
           </div>
-          <div className="mt-12 grid overflow-hidden border border-accent/40 bg-background lg:grid-cols-[0.85fr_1.15fr]">
+          <div className="relative mt-12 grid overflow-hidden border border-accent/40 bg-background shadow-2xl lg:grid-cols-[0.85fr_1.15fr]">
+            <div className="absolute left-0 top-0 h-1 w-full bg-gradient-to-r from-primary via-accent to-primary" aria-hidden="true" />
             <div className="grid place-items-center border-b border-accent/25 bg-surface p-8 lg:border-b-0 lg:border-r">
               <img src={ebookCover} alt="E-book Não Deixa o Amor Terminar incluído na oferta" width={1024} height={1536} loading="lazy" className="aspect-[2/3] w-full max-w-[260px] object-cover shadow-2xl" />
             </div>
             <div className="p-6 sm:p-10 lg:p-12">
-              <div className="flex items-center gap-3 text-accent"><Sparkles className="h-5 w-5" aria-hidden="true" /><span className="text-xs font-bold uppercase">Recebe hoje</span></div>
-              <h3 className="mt-4 font-display text-3xl sm:text-4xl">E-book completo + 5 bónus práticos</h3>
+              <div className="flex flex-wrap items-center gap-3">
+                <span className="inline-flex items-center gap-2 rounded-sm bg-accent/10 px-3 py-1 text-xs font-extrabold uppercase text-accent">
+                  <Sparkles className="h-4 w-4" aria-hidden="true" />
+                  Recebe hoje
+                </span>
+                <span className="inline-flex items-center gap-2 rounded-sm bg-primary/10 px-3 py-1 text-xs font-extrabold uppercase text-primary-foreground">
+                  Acesso imediato
+                </span>
+              </div>
+              <h3 className="mt-5 font-display text-3xl leading-tight sm:text-4xl">E-book completo + 5 bónus práticos</h3>
               <ul className="mt-7 space-y-4">
                 {bonuses.map((bonus, index) => (
                   <li key={bonus} className="flex gap-3 text-sm leading-6 sm:text-base">
@@ -237,13 +256,21 @@ function Index() {
                 ))}
               </ul>
               <div className="my-8 h-px bg-border" />
-              <p className="text-xs font-bold uppercase text-muted-foreground">Investimento único</p>
-              <p className="mt-1 font-display text-4xl text-accent sm:text-5xl">[INSERIR PREÇO] Kz</p>
-              <div className="mt-7"><Cta inverse>Quero o meu e-book agora</Cta></div>
+              <div className="flex flex-wrap items-baseline gap-3">
+                <p className="text-sm font-bold uppercase text-muted-foreground line-through decoration-1">Valor total: [INSERIR VALOR] Kz</p>
+                <span className="rounded-sm bg-accent px-2 py-1 text-xs font-extrabold uppercase text-accent-foreground">Poupe [INSERIR %]%</span>
+              </div>
+              <p className="mt-2 font-display text-5xl text-accent sm:text-6xl">[INSERIR PREÇO] Kz</p>
+              <p className="mt-2 text-sm font-semibold text-muted-foreground">Pagamento único. Sem mensalidades.</p>
+              <div className="mt-7"><Cta inverse>Sim, quero começar agora</Cta></div>
               <div className="mt-5 flex flex-wrap gap-x-5 gap-y-2 text-xs text-subtle">
                 <span className="flex items-center gap-2"><Smartphone className="h-4 w-4 text-accent" />Leitura no telemóvel</span>
                 <span className="flex items-center gap-2"><ShieldCheck className="h-4 w-4 text-accent" />Acesso digital</span>
               </div>
+              <p className="mt-5 flex items-start gap-2 border-l-2 border-accent pl-4 text-sm leading-6 text-muted-foreground">
+                <ShieldCheck className="mt-0.5 h-4 w-4 shrink-0 text-accent" aria-hidden="true" />
+                Garantia de 7 dias: se o conteúdo não fizer sentido para ti, devolvemos o teu investimento.
+              </p>
             </div>
           </div>
         </div>
