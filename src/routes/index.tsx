@@ -76,6 +76,66 @@ const chapters = [
 
 const CHECKOUT_URL = "https://pay.kursinha.com/c/6aa67ea6f254eb2601f7748b";
 
+const OFFER_SECONDS = 5 * 60 + 30; // 5 minutos e 30 segundos
+const DEADLINE_KEY = "ndat-oferta-deadline";
+
+function readDeadline(): number {
+  try {
+    const stored = window.localStorage.getItem(DEADLINE_KEY);
+    const now = Date.now();
+    if (stored) {
+      const parsed = Number(stored);
+      if (Number.isFinite(parsed) && parsed > now) return parsed;
+    }
+    const fresh = now + OFFER_SECONDS * 1000;
+    window.localStorage.setItem(DEADLINE_KEY, String(fresh));
+    return fresh;
+  } catch {
+    return Date.now() + OFFER_SECONDS * 1000;
+  }
+}
+
+function CountdownTimer() {
+  const [remaining, setRemaining] = useState<number>(OFFER_SECONDS);
+
+  useEffect(() => {
+    const deadline = readDeadline();
+    const tick = () => {
+      const left = Math.round((deadline - Date.now()) / 1000);
+      setRemaining(Math.max(0, left));
+    };
+    tick();
+    const id = window.setInterval(tick, 1000);
+    return () => window.clearInterval(id);
+  }, []);
+
+  const minutes = Math.floor(remaining / 60);
+  const seconds = remaining % 60;
+  const pad = (n: number) => String(n).padStart(2, "0");
+  const urgent = remaining <= 60;
+
+  return (
+    <div
+      className={`border p-4 text-center ${urgent ? "animate-pulse border-destructive/70 bg-destructive/10" : "border-accent/50 bg-accent/10"}`}
+      role="timer"
+      aria-live="polite"
+    >
+      <p className="flex items-center justify-center gap-2 text-[11px] font-extrabold uppercase tracking-widest text-accent">
+        <Timer className="h-4 w-4" aria-hidden="true" />
+        {remaining > 0 ? "Esta oferta expira em" : "Oferta expirada"}
+      </p>
+      <p className={`mt-2 font-display text-4xl tabular-nums sm:text-5xl ${urgent ? "text-destructive" : "text-accent"}`}>
+        {pad(minutes)}:{pad(seconds)}
+      </p>
+      <p className="mt-2 text-xs leading-5 text-muted-foreground">
+        {remaining > 0
+          ? "Quando o tempo acabar, o preço pode voltar a 15.000 Kz. Garante os 5.773 Kz agora."
+          : "O tempo acabou — mas ainda podes tentar garantir o preço de lançamento no botão abaixo."}
+      </p>
+    </div>
+  );
+}
+
 function Cta({ children, inverse = false, href = CHECKOUT_URL }: { children: string; inverse?: boolean; href?: string }) {
   return (
     <a
