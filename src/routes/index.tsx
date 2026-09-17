@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import {
   ArrowDown,
@@ -9,6 +10,7 @@ import {
   ShieldCheck,
   Smartphone,
   Sparkles,
+  Timer,
   TriangleAlert,
 } from "lucide-react";
 import ebookCover from "../assets/ebook-cover.jpg";
