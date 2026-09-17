@@ -387,6 +387,9 @@ function Index() {
                   <span className="whitespace-nowrap text-sm font-bold text-muted-foreground">4.000 Kz</span>
                 </li>
               </ul>
+              <div className="mt-7">
+                <CountdownTimer />
+              </div>
               <div className="my-6 flex items-center gap-4">
                 <div className="h-px flex-1 bg-border" />
                 <p className="text-xs font-bold uppercase tracking-wide text-muted-foreground">Valor real de tudo isto</p>
