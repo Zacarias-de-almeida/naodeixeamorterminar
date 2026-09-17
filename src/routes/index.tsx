@@ -253,7 +253,7 @@ function Index() {
               Ainda acreditas no amor de vocês? <span className="text-accent">Então não pares agora.</span>
             </h2>
             <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-muted-foreground sm:text-lg">
-              Recebe o guia completo + 5 bónus práticos e descobre como agir com clareza, dignidade e uma verdadeira chance de reconexão.
+              Não é um livro para ler e esquecer. É um plano de ação completo — o guia principal mais 5 ferramentas práticas — para saberes exatamente o que fazer a cada passo, sem implorar, sem perder a dignidade e sem deixar o silêncio decidir por ti.
             </p>
           </div>
           <div className="relative mt-12 grid overflow-hidden border border-accent/40 bg-background shadow-2xl lg:grid-cols-[0.85fr_1.15fr]">
@@ -261,7 +261,7 @@ function Index() {
             <div className="grid place-items-center border-b border-accent/25 bg-surface p-8 lg:border-b-0 lg:border-r">
               <img src={ebookCover} alt="E-book Não Deixa o Amor Terminar incluído na oferta" width={1024} height={1536} loading="lazy" className="aspect-[2/3] w-full max-w-[260px] object-cover shadow-2xl" />
               <p className="mt-6 max-w-[260px] text-center text-xs leading-5 text-muted-foreground">
-                Logo após o pagamento, recebes o e-book completo e os 5 bónus no telemóvel ou no e-mail — sem esperas, sem custos de envio.
+                Pagou, recebeu. Em menos de 2 minutos o e-book completo e os 5 bónus chegam ao telemóvel ou ao e-mail — para começares hoje, ainda com a dor fresca e a chance intacta.
               </p>
             </div>
             <div className="p-6 sm:p-10 lg:p-12">
@@ -280,7 +280,7 @@ function Index() {
                   <span className="mt-0.5 grid h-6 w-6 shrink-0 place-items-center bg-primary text-primary-foreground"><Check className="h-4 w-4" aria-hidden="true" /></span>
                   <span className="min-w-0 flex-1">
                     <span className="font-bold">E-book “Não Deixa o Amor Terminar”</span>
-                    <span className="block text-xs text-muted-foreground sm:text-sm">Os 7 capítulos completos, passo a passo</span>
+                    <span className="block text-xs text-muted-foreground sm:text-sm">Os 7 capítulos que te levam do término à reconquista — um plano, não conselhos soltos</span>
                   </span>
                   <span className="whitespace-nowrap text-sm font-bold text-muted-foreground">5.000 Kz</span>
                 </li>
@@ -288,7 +288,7 @@ function Index() {
                   <span className="mt-0.5 grid h-6 w-6 shrink-0 place-items-center border border-accent text-xs font-bold text-accent">B1</span>
                   <span className="min-w-0 flex-1">
                     <span className="font-bold">50 Mensagens Para Reabrir Uma Conversa</span>
-                    <span className="block text-xs text-muted-foreground sm:text-sm">Copiar, adaptar e enviar — sem parecer desesperado</span>
+                    <span className="block text-xs text-muted-foreground sm:text-sm">Mensagens prontas para copiar, adaptar e enviar — que despertam curiosidade em vez de desespero</span>
                   </span>
                   <span className="whitespace-nowrap text-sm font-bold text-muted-foreground">1.500 Kz</span>
                 </li>
@@ -296,7 +296,7 @@ function Index() {
                   <span className="mt-0.5 grid h-6 w-6 shrink-0 place-items-center border border-accent text-xs font-bold text-accent">B2</span>
                   <span className="min-w-0 flex-1">
                     <span className="font-bold">Guia da Primeira Conversa</span>
-                    <span className="block text-xs text-muted-foreground sm:text-sm">O que dizer, o que evitar e o momento certo</span>
+                    <span className="block text-xs text-muted-foreground sm:text-sm">O momento certo, as palavras certas e os erros que arruinam tudo nos primeiros 5 minutos</span>
                   </span>
                   <span className="whitespace-nowrap text-sm font-bold text-muted-foreground">1.500 Kz</span>
                 </li>
@@ -304,7 +304,7 @@ function Index() {
                   <span className="mt-0.5 grid h-6 w-6 shrink-0 place-items-center border border-accent text-xs font-bold text-accent">B3</span>
                   <span className="min-w-0 flex-1">
                     <span className="font-bold">Frases Que Podem Destruir Uma Reconciliação</span>
-                    <span className="block text-xs text-muted-foreground sm:text-sm">Para não queimar tudo por uma frase mal dita</span>
+                    <span className="block text-xs text-muted-foreground sm:text-sm">As frases que parecem inofensivas mas matam qualquer reconciliação — identifica-as antes de as dizeres</span>
                   </span>
                   <span className="whitespace-nowrap text-sm font-bold text-muted-foreground">1.500 Kz</span>
                 </li>
@@ -312,7 +312,7 @@ function Index() {
                   <span className="mt-0.5 grid h-6 w-6 shrink-0 place-items-center border border-accent text-xs font-bold text-accent">B4</span>
                   <span className="min-w-0 flex-1">
                     <span className="font-bold">Checklist “Ainda Existe Uma Chance?”</span>
-                    <span className="block text-xs text-muted-foreground sm:text-sm">Avalia a tua situação com clareza, sem ilusões</span>
+                    <span className="block text-xs text-muted-foreground sm:text-sm">Responde com honestidade e descobre, em minutos, se ainda há uma chance real — sem ilusões</span>
                   </span>
                   <span className="whitespace-nowrap text-sm font-bold text-muted-foreground">1.500 Kz</span>
                 </li>
@@ -320,14 +320,14 @@ function Index() {
                   <span className="mt-0.5 grid h-6 w-6 shrink-0 place-items-center border border-accent text-xs font-bold text-accent">B5</span>
                   <span className="min-w-0 flex-1">
                     <span className="font-bold">Desafio de 7 Dias Para Recuperar o Controlo Emocional</span>
-                    <span className="block text-xs text-muted-foreground sm:text-sm">Um passo por dia para sair do desespero</span>
+                    <span className="block text-xs text-muted-foreground sm:text-sm">Um exercício por dia para trocar o desespero pela calma — porque é a tua versão estável que ele(a) sente falta</span>
                   </span>
                   <span className="whitespace-nowrap text-sm font-bold text-muted-foreground">4.000 Kz</span>
                 </li>
               </ul>
               <div className="my-6 flex items-center gap-4">
                 <div className="h-px flex-1 bg-border" />
-                <p className="text-xs font-bold uppercase tracking-wide text-muted-foreground">Soma de tudo</p>
+                <p className="text-xs font-bold uppercase tracking-wide text-muted-foreground">Valor real de tudo isto</p>
                 <div className="h-px flex-1 bg-border" />
               </div>
               <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1">
@@ -338,9 +338,9 @@ function Index() {
                 <span className="font-display text-5xl text-accent sm:text-6xl">5.773 Kz</span>
                 <span className="text-sm font-bold uppercase text-muted-foreground">pagamento único</span>
               </p>
-              <p className="mt-2 text-sm font-semibold text-muted-foreground">Menos do que um jantar. Pela chance de recuperar uma história inteira. Sem mensalidades, sem custos escondidos.</p>
+              <p className="mt-2 text-sm font-semibold text-muted-foreground">Menos do que um jantar. Pela chance de salvar uma história inteira. Pagamento único — sem mensalidades, sem custos escondidos.</p>
               <div className="mt-7"><Cta inverse>Sim, quero começar agora</Cta></div>
-              <p className="mt-3 text-center text-xs font-bold uppercase tracking-wide text-accent sm:text-left">Oferta de lançamento — o preço pode voltar a 15.000 Kz a qualquer momento.</p>
+              <p className="mt-3 text-center text-xs font-bold uppercase tracking-wide text-accent sm:text-left">Oferta de lançamento — cada dia de silêncio aproxima o fim. E o preço pode voltar a 15.000 Kz a qualquer momento.</p>
               <div className="mt-5 flex flex-wrap gap-x-5 gap-y-2 text-xs text-subtle">
                 <span className="flex items-center gap-2"><Smartphone className="h-4 w-4 text-accent" />Leitura no telemóvel</span>
                 <span className="flex items-center gap-2"><ShieldCheck className="h-4 w-4 text-accent" />Acesso digital</span>
