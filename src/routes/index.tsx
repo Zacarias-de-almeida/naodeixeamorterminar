@@ -262,7 +262,7 @@ function Index() {
                 <p className="text-sm font-bold uppercase text-muted-foreground line-through decoration-1">Valor total: [INSERIR VALOR] Kz</p>
                 <span className="rounded-sm bg-accent px-2 py-1 text-xs font-extrabold uppercase text-accent-foreground">Poupe [INSERIR %]%</span>
               </div>
-              <p className="mt-2 font-display text-5xl text-accent sm:text-6xl">[INSERIR PREÇO] Kz</p>
+              <p className="mt-2 font-display text-5xl text-accent sm:text-6xl">5.773 Kz</p>
               <p className="mt-2 text-sm font-semibold text-muted-foreground">Pagamento único. Sem mensalidades.</p>
               <div className="mt-7"><Cta inverse>Sim, quero começar agora</Cta></div>
               <div className="mt-5 flex flex-wrap gap-x-5 gap-y-2 text-xs text-subtle">
