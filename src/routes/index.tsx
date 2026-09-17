@@ -54,13 +54,6 @@ const benefits = [
   "Criar condições reais para uma possível reconexão",
 ];
 
-const bonuses = [
-  "50 Mensagens Para Reabrir Uma Conversa",
-  "Guia da Primeira Conversa",
-  "Frases Que Podem Destruir Uma Reconciliação",
-  "Checklist “Ainda Existe Uma Chance?”",
-  "Desafio de 7 Dias Para Recuperar o Controlo Emocional",
-];
 
 const faqs = [
   ["É um produto digital?", "Sim. Recebes um e-book em formato digital, sem esperas e sem custos de envio."],
