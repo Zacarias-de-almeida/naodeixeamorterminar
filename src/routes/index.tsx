@@ -69,6 +69,16 @@ const faqs = [
   ["Funciona para qualquer relacionamento?", "O guia apresenta princípios aplicáveis a diferentes histórias. Cada relação é única, por isso não promete um resultado obrigatório."],
 ];
 
+const chapters = [
+  ["01", "A verdade sobre o término", "O que realmente levou ao fim — e por que perceber isto muda toda a tua estratégia a partir de hoje."],
+  ["02", "Domina as tuas emoções", "Como parar de agir por impulso e recuperar o controlo nos primeiros dias, quando a saudade dói mais."],
+  ["03", "Corrige os 5 erros antes que seja tarde", "Identifica exatamente o que tens feito para afastar a pessoa — e como reverter cada um deles."],
+  ["04", "O poder do espaço certo", "Como usar a distância a teu favor, para que a tua ausência seja sentida — nunca esquecida."],
+  ["05", "A comunicação que reabre portas", "As palavras que aproximam e as frases que fecham para sempre. Saber o que dizer — e o momento certo."],
+  ["06", "O momento da reconexão", "Quando e como voltar a falar, sem pressão, sem cobrança — com calma e confiança."],
+  ["07", "A tua nova posição de força", "Como sair desta fase mais forte, com ou sem reconciliação — e nunca mais ficar à mercê do medo."],
+];
+
 const CHECKOUT_URL = "https://pay.kursinha.com/c/6aa67ea6f254eb2601f7748b";
 
 function Cta({ children, inverse = false, href = CHECKOUT_URL }: { children: string; inverse?: boolean; href?: string }) {
@@ -105,7 +115,7 @@ function Index() {
             </div>
             <p className="mt-4 flex items-center gap-2 text-xs text-subtle">
               <ShieldCheck className="h-4 w-4 text-accent" aria-hidden="true" />
-              Conteúdo responsável. Sem promessas impossíveis.
+              Garantia de 7 dias. Compra sem risco.
             </p>
           </div>
 
@@ -217,6 +227,26 @@ function Index() {
         </div>
       </section>
 
+      <section className="bg-paper text-ink">
+        <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-28">
+          <div className="mx-auto max-w-3xl">
+            <p className="section-label">Tudo o que vais receber dentro do guia</p>
+            <h2 className="mt-5 font-display text-4xl uppercase leading-tight sm:text-6xl">7 capítulos. Diretos ao ponto. Sem enrolação.</h2>
+            <p className="mt-5 text-lg leading-8 text-ink-muted">Nada de teoria complicada: cada capítulo diz-te exatamente o que fazer — e o que evitar — a partir de hoje, passo a passo.</p>
+          </div>
+          <ol className="mt-12 divide-y divide-paper-border border-y border-paper-border">
+            {chapters.map(([number, title, text]) => (
+              <li key={number} className="grid gap-2 py-7 sm:grid-cols-[64px_0.9fr_1.1fr] sm:items-center sm:gap-8">
+                <span className="font-display text-3xl text-accent">{number}</span>
+                <h3 className="text-lg font-bold uppercase">{title}</h3>
+                <p className="leading-7 text-ink-muted">{text}</p>
+              </li>
+            ))}
+          </ol>
+          <div className="mt-10 text-center"><Cta>Quero receber o meu e-book</Cta></div>
+        </div>
+      </section>
+
       <section id="oferta" className="relative overflow-hidden border-y border-accent/30 bg-offer py-20 sm:py-28">
         <div className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-primary/10 blur-3xl" aria-hidden="true" />
         <div className="pointer-events-none absolute -bottom-32 -left-32 h-80 w-80 rounded-full bg-accent/5 blur-3xl" aria-hidden="true" />
@@ -259,8 +289,8 @@ function Index() {
               </ul>
               <div className="my-8 h-px bg-border" />
               <div className="flex flex-wrap items-baseline gap-3">
-                <p className="text-sm font-bold uppercase text-muted-foreground line-through decoration-1">Valor total: [INSERIR VALOR] Kz</p>
-                <span className="rounded-sm bg-accent px-2 py-1 text-xs font-extrabold uppercase text-accent-foreground">Poupe [INSERIR %]%</span>
+                <p className="text-sm font-bold uppercase text-muted-foreground line-through decoration-1">Valor total: 15.000 Kz</p>
+                <span className="rounded-sm bg-accent px-2 py-1 text-xs font-extrabold uppercase text-accent-foreground">Poupe 62%</span>
               </div>
               <p className="mt-2 font-display text-5xl text-accent sm:text-6xl">5.773 Kz</p>
               <p className="mt-2 text-sm font-semibold text-muted-foreground">Pagamento único. Sem mensalidades.</p>
@@ -269,10 +299,15 @@ function Index() {
                 <span className="flex items-center gap-2"><Smartphone className="h-4 w-4 text-accent" />Leitura no telemóvel</span>
                 <span className="flex items-center gap-2"><ShieldCheck className="h-4 w-4 text-accent" />Acesso digital</span>
               </div>
-              <p className="mt-5 flex items-start gap-2 border-l-2 border-accent pl-4 text-sm leading-6 text-muted-foreground">
-                <ShieldCheck className="mt-0.5 h-4 w-4 shrink-0 text-accent" aria-hidden="true" />
-                Garantia de 7 dias: se o conteúdo não fizer sentido para ti, devolvemos o teu investimento.
-              </p>
+              <div className="mt-6 border border-accent/50 bg-accent/10 p-5">
+                <p className="flex items-center gap-2 font-display text-xl text-accent sm:text-2xl">
+                  <ShieldCheck className="h-5 w-5 shrink-0" aria-hidden="true" />
+                  Garantia incondicional de 7 dias
+                </p>
+                <p className="mt-3 text-sm leading-6 text-muted-foreground sm:text-base">
+                  Abre o e-book, lê e aplica. Se em 7 dias sentires que não valeu cada kwanza investido, basta um único contacto e devolvemos 100% do teu dinheiro — sem perguntas, sem burocracia, sem desculpas. Ou funciona para ti, ou não pagas. O risco é todo nosso.
+                </p>
+              </div>
             </div>
           </div>
         </div>
