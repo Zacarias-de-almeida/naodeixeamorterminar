@@ -455,6 +455,7 @@ function Index() {
           <HeartCrack className="mx-auto h-10 w-10 text-accent" aria-hidden="true" />
           <h2 className="mx-auto mt-7 max-w-4xl font-display text-4xl uppercase leading-tight sm:text-6xl">Ainda acreditas que esta história merece uma última oportunidade?</h2>
           <p className="mx-auto mt-6 max-w-2xl leading-7 text-primary-foreground">Não deixes que o medo decida por ti. Recupera primeiro a tua clareza — e descobre o próximo passo possível.</p>
+          <div className="mx-auto mt-8 w-full max-w-md"><CountdownTimer /></div>
           <div className="mt-9"><Cta inverse>Sim, quero começar agora</Cta></div>
         </div>
       </section>
