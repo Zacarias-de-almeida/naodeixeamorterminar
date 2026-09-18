@@ -137,9 +137,17 @@ function CountdownTimer() {
 }
 
 function Cta({ children, inverse = false, href = CHECKOUT_URL }: { children: string; inverse?: boolean; href?: string }) {
+  const trackCheckout = () => {
+    const fbq = (window as { fbq?: (...args: unknown[]) => void }).fbq;
+    if (href === CHECKOUT_URL && typeof fbq === "function") {
+      fbq("track", "InitiateCheckout", { content_name: "Ebook Não Deixa o Amor Terminar", value: 5773, currency: "AOA" });
+    }
+  };
+
   return (
     <a
       href={href}
+      onClick={trackCheckout}
       className={`group inline-flex min-h-14 w-full items-center justify-center gap-3 px-6 py-4 text-center text-sm font-extrabold uppercase transition-transform duration-300 hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring sm:w-auto sm:min-w-72 ${inverse ? "bg-background text-foreground" : "bg-primary text-primary-foreground"}`}
     >
       {children}
